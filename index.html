@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <form method="post" action="javascript: void(0);" id="login-form" class="login-form" autocomplete="off">
+    <form method="post" id="login-form" class="login-form" autocomplete="off">
         <h1 class="a11y-hidden">Login form</h1>
         <figure aria-hidden="true">
             <div class="person-body"></div>
@@ -25,6 +25,7 @@
             <div class="shirt-1"></div>
             <div class="shirt-2"></div>
         </figure>
+        <div aria-live="polite" class="error-message" id="error-message"></div>
         <div>
             <label class="required">
             <span>Username</span>
@@ -34,7 +35,7 @@
         <div>
             <label class="required">
             <span>Password</span>
-            <input type="password" name="password" id="password" placeholder="Password" required />
+            <input type="password" name="password" id="password" placeholder="Password" required minlength="8" />
         </label>
         </div>
         <div>
