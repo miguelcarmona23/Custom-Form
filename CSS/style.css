@@ -166,3 +166,9 @@
         width: 45%;
         height: 55%;
     }
+    
+    figure .head .eyes.closed::before,
+    figure .head .eyes.closed::after {
+        height: 0.125rem;
+        animation: none;
+    }
