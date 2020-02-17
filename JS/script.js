@@ -45,3 +45,6 @@ function removeError(e) {
 }
 document.querySelector("#password").addEventListener("input", removeError);
 document.querySelector("#username").addEventListener("input", removeError);
+
+const invalidFields = document.querySelectorAll("input:invalid").length;
+document.querySelector(".mouth").className = `mouth errors-${invalidFields}`;
