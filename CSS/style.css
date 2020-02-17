@@ -64,3 +64,9 @@ input[type="submit"] {
     padding-left: 0;
     text-transform: uppercase;
 }
+
+.a11y-hidden {
+    position: absolute;
+    top: -1000em;
+    left: -1000em;
+}
