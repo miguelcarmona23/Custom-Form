@@ -129,3 +129,17 @@ input[type="checkbox"]:checked+span::after {
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
     transition: color 0.25s;
 }
+
+label.state-focus span {
+    color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+}
+
+label input:focus,
+label.state-focus input,
+label.state-focus span.checkbox-label::before {
+    border-color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+}
+
+label.state-focus input[type="checkbox"]:checked+span.checkbox-label::after {
+    background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+}
