@@ -76,3 +76,18 @@ input[type="checkbox"]+span {
     padding-left: 1.25rem;
     position: relative;
 }
+
+input[type="checkbox"]+span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 1px solid var(--borderDark);
+    border-radius: var(--borderRadius);
+    transition: all 0.25s;
+    outline: 1px dashed transparent;
+    outline-offset: 2px;
+}
