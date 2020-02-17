@@ -12,33 +12,33 @@
 
 <body>
     <form method="post" action="javascript: void(0);" id="login-form" class="login-form" autocomplete="off">
-        <h1>Login form</h1>
+        <h1 class="a11y-hidden">Login form</h1>
         <figure>
+            <!-- Placeholder for the image -->
         </figure>
         <div>
             <label class="required">
-                <span>Username</span>
-                <input type="text" name="username" id="username" placeholder="Username" required />
-            </label>
+            <span>Username</span>
+            <input type="text" name="username" id="username" placeholder="Username" required />
+          </label>
         </div>
         <div>
             <label class="required">
-                <span>Password</span>
-                <input type="password" name="password" id="password" placeholder="Password" required />
-            </label>
+            <span>Password</span>
+            <input type="password" name="password" id="password" placeholder="Password" required />
+          </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" name="show-password" id="show-password" />
-                <span class="checkbox-label">Show Password</span>
-            </label>
+            <input type="checkbox" name="show-password" id="show-password" class="a11y-hidden" />
+            <span class="checkbox-label">Show Password</span>
+          </label>
         </div>
         <input type="submit" value="Log In" name="submit" id="submit" />
         <div class="forgot-password">
             <a href="#">Forgot password?</a>
         </div>
     </form>
-
 </body>
 <!--Javascript-->
 <script src="JS/script.js"></script>
