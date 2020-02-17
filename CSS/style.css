@@ -112,3 +112,14 @@ input[type="checkbox"]:checked+span::after {
     margin-top: 0.125rem;
     text-align: center;
 }
+
+.forgot-password a {
+    color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+    font-size: 0.825rem;
+    order: 4;
+    text-align: center;
+    margin-top: 0.25rem;
+    outline: 1px dashed transparent;
+    outline-offset: 2px;
+    display: inline;
+}
