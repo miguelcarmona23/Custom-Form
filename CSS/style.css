@@ -1,22 +1,3 @@
-form {
-    --bgColorH: 0;
-    --bgColorS: 0%;
-    --bgColorL: 98%;
-    --fgColorH: 210;
-    --fgColorS: 50%;
-    --fgColorL: 38%;
-    --background: rgba(255, 255, 255, 1);
-    --border: rgba(0, 0, 0, 0.125);
-    --borderRadius: 0.125rem;
-    background: var(--background);
-    border: 1px solid var(--border);
-    border-radius: var(--borderRadius);
-    box-shadow: 0 1rem 1rem -0.75rem var(--border);
-    overflow: hidden;
-    padding: 1rem;
-    position: relative;
-}
-
 html,
 body {
     align-items: center;
@@ -29,6 +10,31 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
+}
+
+.a11y-hidden {
+    position: absolute;
+    top: -1000em;
+    left: -1000em;
+}
+
+form {
+    --background: rgba(255, 255, 255, 1);
+    --border: rgba(0, 0, 0, 0.125);
+    --borderDark: rgba(0, 0, 0, 0.25);
+    --borderDarker: rgba(0, 0, 0, 0.5);
+    --borderRadius: 0.125rem;
+    --bgColorH: 0;
+    --bgColorS: 0%;
+    --bgColorL: 98%;
+    --fgColorH: 210;
+    --fgColorS: 50%;
+    --fgColorL: 38%;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 1rem 1rem -0.75rem var(--border);
+    padding: 1rem;
 }
 
 input {
@@ -46,6 +52,7 @@ input {
 }
 
 label span {
+    color: var(--borderDarker);
     display: block;
     font-size: 0.825rem;
     margin-top: 1rem;
@@ -57,18 +64,12 @@ input[type="submit"] {
     background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
     font-size: 0.75rem;
     font-weight: bold;
-    margin-top: 0.625rem;
+    margin-top: 1rem;
     order: 4;
     outline: 1px dashed transparent;
     outline-offset: 2px;
     padding-left: 0;
     text-transform: uppercase;
-}
-
-.a11y-hidden {
-    position: absolute;
-    top: -1000em;
-    left: -1000em;
 }
 
 input[type="checkbox"]+span {
