@@ -123,3 +123,8 @@ input[type="checkbox"]:checked+span::after {
     outline-offset: 2px;
     display: inline;
 }
+
+.forgot-password a:hover {
+    color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+    transition: color 0.25s;
+}
