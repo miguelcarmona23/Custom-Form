@@ -59,10 +59,15 @@ input {
     height: 2.25rem;
     line-height: 1.25rem;
     margin-top: 0.25rem;
-    order: 2;
+    outline: 1px dashed transparent;
+    outline-offset: 2px;
     padding: 0.25rem 0.5rem;
-    width: 15rem;
     transition: all 0.25s;
+    width: 15rem;
+}
+
+input:focus {
+    outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
 label {
@@ -74,7 +79,7 @@ label span {
     display: block;
     font-size: 0.825rem;
     margin-top: 1rem;
-    transition: color 0.3s;
+    transition: color 0.25s;
 }
 
 label.required span::after {
@@ -83,16 +88,33 @@ label.required span::after {
     margin-left: 0.125rem;
 }
 
+label:hover span {
+    color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+label:hover input,
+label:hover span.checkbox-label::before {
+    border-color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+label:hover input[type="checkbox"]:checked+span.checkbox-label::after {
+    background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+label:focus-within span,
 label.state-focus span {
     color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
 label input:focus,
+label:focus-within input,
+label:focus-within span.checkbox-label::before,
 label.state-focus input,
 label.state-focus span.checkbox-label::before {
     border-color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
+label:focus-within input[type="checkbox"]:checked+span.checkbox-label::after,
 label.state-focus input[type="checkbox"]:checked+span.checkbox-label::after {
     background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
@@ -105,21 +127,24 @@ label.state-error input {
     border-color: var(--errorMessage);
 }
 
-label input {
-    transition: border-color 0.3s;
-}
-
 input[type="submit"] {
     color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
     background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
     font-size: 0.75rem;
     font-weight: bold;
     margin-top: 1rem;
-    order: 4;
-    /*outline: 1px dashed transparent;
-    outline-offset: 2px;*/
     padding-left: 0;
     text-transform: uppercase;
+    transition: all 0.125s;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+}
+
+input[type="submit"]:active {
+    background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
 input[type="checkbox"]+span {
@@ -140,6 +165,11 @@ input[type="checkbox"]+span::before {
     border-radius: var(--borderRadius);
     transition: all 0.25s;
     outline: 1px dashed transparent;
+    outline-offset: 2px;
+}
+
+input[type="checkbox"]:focus+span::before {
+    outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
     outline-offset: 2px;
 }
 
@@ -167,20 +197,25 @@ input[type="checkbox"]:checked+span::after {
 .forgot-password a {
     color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
     font-size: 0.825rem;
-    order: 4;
     text-align: center;
     margin-top: 0.25rem;
-    /*
     outline: 1px dashed transparent;
     outline-offset: 2px;
-    */
     display: inline;
+    transition: 0.25s;
+}
+
+.forgot-password a:focus {
+    color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+    outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
 .forgot-password a:hover {
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
-    transition: color 0.25s;
 }
+
+
+/** PERSON */
 
 figure {
     --skinH: 30;
@@ -193,7 +228,6 @@ figure {
     height: 0;
     margin: auto auto;
     margin-bottom: 2rem;
-    order: 1;
     padding-top: 60%;
     position: relative;
     width: 60%;
