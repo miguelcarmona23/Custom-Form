@@ -143,3 +143,14 @@ label.state-focus span.checkbox-label::before {
 label.state-focus input[type="checkbox"]:checked+span.checkbox-label::after {
     background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
+
+figure .head .mouth {
+    border: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid var(--borderDarker);
+    width: 25%;
+    border-radius: 50%;
+    transition: all 0.333s;
+    top: 75%;
+    left: 50%;
+    height: 10%;
+}
