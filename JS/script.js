@@ -38,3 +38,10 @@ document.querySelector(".login-form").addEventListener("submit", function(e) {
         e.preventDefault();
     }
 });
+
+function removeError(e) {
+    e.target.parentNode.classList.remove("state-error");
+    document.querySelector("#error-message").textContent = "";
+}
+document.querySelector("#password").addEventListener("input", removeError);
+document.querySelector("#username").addEventListener("input", removeError);
