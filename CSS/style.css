@@ -44,3 +44,10 @@ input {
     width: 15rem;
     transition: all 0.25s;
 }
+
+label span {
+    display: block;
+    font-size: 0.825rem;
+    margin-top: 1rem;
+    position: relative;
+}
