@@ -50,3 +50,14 @@ const invalidFields = document.querySelectorAll("input:invalid").length;
 document.querySelector(".mouth").className = `mouth errors-${invalidFields}`;
 
 document.querySelector(".eyes").className = `eyes ${this.checked && " closed"}`;
+
+function moveEyes(e) {
+    const eyes = document.querySelector(".eyes");
+    const length = e.target.value.length;
+    eyes.style.transform = `translate(calc(-50% + ${Math.min(length/2 - 7, 7)}px), calc(-50% + 0.25rem))`;
+}
+document.querySelector("#username").addEventListener("focus", moveEyes);
+document.querySelector("#username").addEventListener("input", moveEyes);
+document.querySelector("#username").addEventListener("blur", function() {
+    document.querySelector(".eyes").style.transform = "translate(-50%, -50%)";
+});
