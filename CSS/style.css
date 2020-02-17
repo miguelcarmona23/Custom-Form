@@ -70,3 +70,9 @@ input[type="submit"] {
     top: -1000em;
     left: -1000em;
 }
+
+input[type="checkbox"]+span {
+    margin-top: 0.25rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
