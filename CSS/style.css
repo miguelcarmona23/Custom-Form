@@ -107,3 +107,8 @@ input[type="checkbox"]:checked+span::after {
     outline-offset: 2px;
     background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
+
+.forgot-password {
+    margin-top: 0.125rem;
+    text-align: center;
+}
